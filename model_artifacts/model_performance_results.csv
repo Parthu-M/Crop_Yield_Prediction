@@ -1,0 +1,8 @@
+Model,RMSE,R²,MAE,Status,Model Path
+Linear Regression,0.5034478745970973,0.9119007431678605,0.40011577361860606,Success,D:\Crop Yield Prediction\model_artifacts\linear_regression.pkl
+Ridge Regression,0.5034479003926707,0.911900734139832,0.4001158110079177,Success,D:\Crop Yield Prediction\model_artifacts\ridge_regression.pkl
+CatBoost,0.5039890594420097,0.9117112355308458,0.4006447021500528,Success,D:\Crop Yield Prediction\model_artifacts\catboost.pkl
+Gradient Boosting,0.5041495650006821,0.911654991873585,0.40091229442154974,Success,D:\Crop Yield Prediction\model_artifacts\gradient_boosting.pkl
+LightGBM,0.5041849714673676,0.911642582483025,0.40090816845275135,Success,D:\Crop Yield Prediction\model_artifacts\lightgbm.pkl
+Random Forest,0.5042170956149029,0.9116313227378865,0.4008615295221337,Success,D:\Crop Yield Prediction\model_artifacts\random_forest.pkl
+XGBoost,0.5047681852433926,0.911438050137516,0.4012903451452275,Success,D:\Crop Yield Prediction\model_artifacts\xgboost.pkl
