@@ -1,0 +1,190 @@
+/* Base Styles with Background Image */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('/static/images/pexels-quang-nguyen-vinh-222549-2132250.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(245, 245, 245, 0.9);
+    background-blend-mode: lighten;
+}
+
+/* Content Container with Semi-Transparent Background */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header with Semi-Transparent Background */
+header {
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+}
+
+/* Form and Results Sections */
+.prediction-form, 
+.results,
+.input-summary {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Checkbox Styles */
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Button Styles */
+.btn-predict, 
+.btn-back {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-predict:hover, 
+.btn-back:hover {
+    background-color: #3e8e41;
+}
+
+/* Results Section */
+.results h2 {
+    color: #2e7d32;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+/* Input Summary */
+.input-summary {
+    background: rgba(249, 249, 249, 0.95);
+}
+
+/* Prediction Card */
+.best-prediction {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.prediction-card {
+    background: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yield-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    color: white;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(242, 242, 242, 0.7);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(221, 221, 221, 0.7);
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0 0 5px 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .prediction-form, 
+    .results,
+    .input-summary {
+        padding: 20px;
+    }
+    
+    header {
+        padding: 15px 0;
+    }
+}

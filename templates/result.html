@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .result-card { background: #f9f9f9; border-radius: 5px; padding: 20px; margin-bottom: 20px; }
+        .primary { border-left: 5px solid #4CAF50; }
+        .fallback { border-left: 5px solid #2196F3; margin-top: 15px; }
+        h2 { color: #4CAF50; }
+        .back-btn { display: inline-block; margin-top: 20px; padding: 10px 15px; background: #4CAF50; color: white; text-decoration: none; border-radius: 5px; }
+        .back-btn:hover { background: #45a049; }
+        .input-data { margin-top: 30px; padding: 15px; background: #f0f0f0; border-radius: 5px; }
+        .pred-value { font-size: 1.2em; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    
+    {% if prediction %}
+    <div class="result-card primary">
+        <h2>Primary Prediction ({{ prediction.model }})</h2>
+        <p><strong>Predicted Yield:</strong> <span class="pred-value">{{ "%.5f"|format(prediction.value) }}</span> {{ prediction.unit }}</p>
+    </div>
+    {% endif %}
+    
+    {% if fallback_predictions %}
+    <div class="fallback">
+        <h3>Alternative Predictions:</h3>
+        {% for model, pred in fallback_predictions.items() %}
+        <div class="result-card">
+            <p><strong>{{ model }}:</strong> <span class="pred-value">{{ "%.5f"|format(pred.value) }}</span> {{ pred.unit }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    <div class="input-data">
+        <h3>Input Parameters:</h3>
+        <ul>
+            {% for key, value in input_data.items() %}
+            <li><strong>{{ key }}:</strong> 
+                {% if value is number %}
+                    {{ "%.5f"|format(value) if value % 1 else value|int }}
+                {% else %}
+                    {{ value }}
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <a href="/" class="back-btn">Make Another Prediction</a>
+</body>
+</html>
