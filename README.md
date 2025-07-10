@@ -31,12 +31,10 @@ Dropdowns for categorical fields, toggle switches for boolean options, and input
 ## 📸 Demo
 
 ### 📝 Input Form
-![form](<img width="1138" height="599" alt="image" src="https://github.com/user-attachments/assets/503cb3d2-309e-48d5-a474-da48254c0587" />
-)
+![form](assets/input.png)
 
 ### 📊 Prediction Output
-![output](<img width="1193" height="370" alt="image" src="https://github.com/user-attachments/assets/6040d00f-a016-4370-bf73-6e734b4fba55" />
-)
+![output](assets/output.png)
 
 
 ---
